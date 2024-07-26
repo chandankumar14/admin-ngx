@@ -1,4 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import "app/@themes/_styles/theme-light";
+@import 'app/@themes/_styles/theme-dark';
+
+// Default to light theme
+body {
+  &.theme-light {
+    @include angular-material-theme($light-theme);
+  }
+
+  &.theme-dark {
+    @include angular-material-theme($dark-theme);
+  }
+}
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -9,4 +22,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     --h1-heading-color:#255d80;
     --login-page-bg:rgba(0, 0, 0, 0.231372519);
     --bg-color-1:#E9EDEF;
+}
+
+.required{
+    ::after{
+        content: "*";
+        color: red;
+    }
 }
