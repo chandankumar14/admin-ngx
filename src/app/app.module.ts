@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HeaderComponent } from './@shared/header/header.component';
 import { FooterComponent } from './@shared/footer/footer.component';
+import { MaterialModel } from './@shared/material';
+import { AuthModule } from './@auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { FooterComponent } from './@shared/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModel,
+    AuthModule
   ],
   providers: [
     provideAnimationsAsync()

@@ -1,54 +1,43 @@
-@if (loggedId) {
-    <mat-toolbar class="mat-elevation-z3">
-      <button mat-icon-button (click)="collapsed.set(!collapsed())" class="toolbar_btn">
-        <mat-icon style="cursor: pointer;">menu</mat-icon>
-      </button>
-      <span style="margin-left: 10px;">Admin</span>
-    </mat-toolbar>
-    <mat-sidenav-container>
-      <!-- this side nav area----->
-      <mat-sidenav opened mode="side" [style.width]="sideNaveWidth()">
-        <mat-nav-list>
-          <a mat-list-item *ngFor=" let item of menuItem()" routerLinkActive #rla="routerLinkActive"
-            [ngClass]="{'active':rla.isActive}"
-            [routerLink]="item.route"
-            (click)="Breadcrum(item.label)">
-            <mat-icon matListItemIcon [ngClass]="{'icon':rla.isActive}">{{item.icon}}</mat-icon>
-            <span *ngIf="!collapsed()"
-              [ngClass]="{'label':rla.isActive}">{{item.label}}</span>
-          </a>
-        </mat-nav-list>
-      </mat-sidenav>
-      <!--- End of Side nav area----->
-      <!-- this is main  content area----->
-      <mat-sidenav-content [style.margin-left]="sideNaveWidth()">
-        <div class="justify-content-center">
-          <p class="heading">{{Heading}}</p>
-      </div>
-      
-        <router-outlet></router-outlet>
-      </mat-sidenav-content>
-      <!--- End of main content area---->
-    </mat-sidenav-container>
-    }@else {
-    <app-login></app-login>
-    }
+<!-- <mat-toolbar class="mat-elevation-z3">
+  <button
+    mat-icon-button
+    (click)="collapsed.set(!collapsed())"
+    class="toolbar_btn"
+  >
+    <mat-icon style="cursor: pointer">menu</mat-icon>
+  </button>
+  <span style="margin-left: 10px">Admin</span>
+</mat-toolbar>
+<mat-sidenav-container>
+  
+  <mat-sidenav opened mode="side" [style.width]="sideNaveWidth()">
+    <mat-nav-list>
+      <a
+        mat-list-item
+        *ngFor="let item of menuItem()"
+        routerLinkActive
+        #rla="routerLinkActive"
+        [ngClass]="{ active: rla.isActive }"
+        [routerLink]="item.route"
+        (click)="Breadcrum(item.label)"
+      >
+        <mat-icon matListItemIcon [ngClass]="{ icon: rla.isActive }">{{
+          item.icon
+        }}</mat-icon>
+        <span *ngIf="!collapsed()" [ngClass]="{ label: rla.isActive }">{{
+          item.label
+        }}</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  
+  <mat-sidenav-content [style.margin-left]="sideNaveWidth()">
+    <div class="justify-content-center">
+      <p class="heading">{{ Heading }}</p>
+    </div>
 
-
-
-
-import { NgModule } from "@angular/core";
-import { MatSidenavModule } from "@angular/material/sidenav"
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatListModule} from '@angular/material/list';
-
-@NgModule({
-    exports: [
-        MatSidenavModule,
-        MatToolbarModule,
-        MatIconModule,
-        MatListModule
-    ]
-})
-export class MaterialModel { }
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+ 
+</mat-sidenav-container> -->
+<router-outlet></router-outlet>

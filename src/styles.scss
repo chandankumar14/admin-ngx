@@ -1,17 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-@import "app/@themes/_styles/theme-light";
-@import 'app/@themes/_styles/theme-dark';
+// @import "app/@themes/_styles/theme-light";
+// @import 'app/@themes/_styles/theme-dark';
 
 // Default to light theme
-body {
-  &.theme-light {
-    @include angular-material-theme($light-theme);
-  }
+// body {
+//   &.theme-light {
+//     @include angular-material-theme($light-theme);
+//   }
 
-  &.theme-dark {
-    @include angular-material-theme($dark-theme);
-  }
-}
+//   &.theme-dark {
+//     @include angular-material-theme($dark-theme);
+//   }
+// }
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
