@@ -1,20 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'admin-ngx';
-
-
-  // Heading:string=''
-  // loggedId: boolean = true
-  // menuItem = signal<MENU_ITEM[]>(sideMenu)
-  // collapsed = signal(false)
-  // sideNaveWidth = computed(()=>this.collapsed()?'70px':'210px')
-  // Breadcrum(item:string){
-  //   this.Heading = item;
-  // }
+  loggedId: boolean = true;
+  collapsed = signal(false);
+  sideNaveWidth = computed(() => (this.collapsed() ? '70px' : '210px'));
 }

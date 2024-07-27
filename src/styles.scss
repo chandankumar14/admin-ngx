@@ -1,32 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
-// @import "app/@themes/_styles/theme-light";
-// @import 'app/@themes/_styles/theme-dark';
-
-// Default to light theme
-// body {
-//   &.theme-light {
-//     @include angular-material-theme($light-theme);
-//   }
-
-//   &.theme-dark {
-//     @include angular-material-theme($dark-theme);
-//   }
-// }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-:root{
-    --footer-background-color:linear-gradient(130deg, #255d80, #87a6b9);
-    --save-btn-color:#245778;
-    --h1-heading-color:#255d80;
-    --login-page-bg:rgba(0, 0, 0, 0.231372519);
-    --bg-color-1:#E9EDEF;
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.required{
-    ::after{
-        content: "*";
-        color: red;
-    }
+:root {
+  --footer-background-color: linear-gradient(130deg, #255d80, #87a6b9);
+  --save-btn-color: #245778;
+  --h1-heading-color: #255d80;
+  --login-page-bg: rgba(0, 0, 0, 0.231372519);
+  --bg-color-1: #e9edef;
+}
+
+.required {
+  ::after {
+    content: "*";
+    color: red;
+  }
 }
