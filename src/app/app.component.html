@@ -1,73 +1,26 @@
-<!-- <mat-toolbar class="mat-elevation-z3">
-  <button
-    mat-icon-button
-    (click)="collapsed.set(!collapsed())"
-    class="toolbar_btn"
-  >
-    <mat-icon style="cursor: pointer">menu</mat-icon>
+<mat-toolbar class="mat-elevation-z3">
+  <button mat-icon-button (click)="collapsed.set(!collapsed())" class="btn-custom">
+    <mat-icon>menu</mat-icon>
   </button>
-  <span style="margin-left: 10px">Admin</span>
+  <span style="margin-left: 10px; color: #fff;">Admin</span>
 </mat-toolbar>
 <mat-sidenav-container>
-  
   <mat-sidenav opened mode="side" [style.width]="sideNaveWidth()">
     <mat-nav-list>
-      <a
-        mat-list-item
-        *ngFor="let item of menuItem()"
-        routerLinkActive
-        #rla="routerLinkActive"
-        [ngClass]="{ active: rla.isActive }"
-        [routerLink]="item.route"
-        (click)="Breadcrum(item.label)"
-      >
-        <mat-icon matListItemIcon [ngClass]="{ icon: rla.isActive }">{{
-          item.icon
-        }}</mat-icon>
-        <span *ngIf="!collapsed()" [ngClass]="{ label: rla.isActive }">{{
-          item.label
-        }}</span>
+      <a mat-list-item *ngFor=" let item of menuItem()" routerLinkActive #rla="routerLinkActive"
+        [ngClass]="{'active':rla.isActive}" [routerLink]="item.route" (click)="Breadcrum(item.label)">
+        <mat-icon matListItemIcon [ngClass]="{'icon':rla.isActive}">{{item.icon}}</mat-icon>
+        <span *ngIf="!collapsed()" [ngClass]="{'label':rla.isActive}">{{item.label}}</span>
       </a>
     </mat-nav-list>
   </mat-sidenav>
-  
+
   <mat-sidenav-content [style.margin-left]="sideNaveWidth()">
     <div class="justify-content-center">
-      <p class="heading">{{ Heading }}</p>
+      <p class="heading">{{Heading}}</p>
     </div>
 
     <router-outlet></router-outlet>
   </mat-sidenav-content>
- 
-</mat-sidenav-container> -->
 
-<mat-toolbar class="mat-elevation-z5">
-  <button (click)="collapsed.set(!collapsed())" class="btn-custom">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span style="margin-left: 10px; color: #fff">Admin</span>
-</mat-toolbar>
-
-<mat-sidenav-container>
-  <mat-sidenav opened mode="side" [style.width]="sideNaveWidth()">
-    <mat-nav-list>
-      <a mat-list-item>
-        <mat-icon matListItemIcon>dashboard</mat-icon><span>hello</span>
-      </a>
-
-      <a mat-list-item>
-        <mat-icon matListItemIcon>home</mat-icon><span>hello</span>
-      </a>
-
-      <a mat-list-item>
-        <mat-icon matListItemIcon>menu</mat-icon><span>hello</span>
-      </a>
-      <a mat-list-item>
-        <mat-icon matListItemIcon>shop</mat-icon><span>hello</span>
-      </a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content
-    [style.margin-left]="sideNaveWidth()"
-  ></mat-sidenav-content>
 </mat-sidenav-container>

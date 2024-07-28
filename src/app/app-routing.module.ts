@@ -1,23 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { DashboardComponent } from './@modules/dashboard/dashboard.component';
 
 const routes: Routes = [
+  
   {
-    path: '',
-    redirectTo: 'auth',
-    pathMatch: 'full',
+    path:"product",
+    loadChildren:()=>import("./@modules/product/product.module").then(m=>m.ProductModule)
   },
-  {
-    path: 'auth',
-    // loadChildren: () =>
-    //   import('../app/@auth/auth.module').then((m) => m.AuthModule),
-    component:AppComponent
-  },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardComponent, pathMatch: 'full' },
+  { path: '**', redirectTo: 'dashboard', pathMatch: 'full' },
+
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

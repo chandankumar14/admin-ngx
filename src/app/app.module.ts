@@ -7,19 +7,23 @@ import { HeaderComponent } from './@shared/header/header.component';
 import { FooterComponent } from './@shared/footer/footer.component';
 import { MaterialModel } from './@shared/material';
 import { AuthModule } from './@auth/auth.module';
+import { PrimeNgModule } from './@shared/primeng_model';
+import { DashboardComponent } from './@modules/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    DashboardComponent
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModel,
-    AuthModule
+    AuthModule,
+    PrimeNgModule
   ],
   providers: [
     provideAnimationsAsync()

@@ -1,4 +1,6 @@
 import { Component, computed, signal } from '@angular/core';
+import { SIDE_MENU_ITEM } from './@models/_side-model';
+import { MENU_ITEM } from './@shared/_side-menu';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +8,13 @@ import { Component, computed, signal } from '@angular/core';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'admin-ngx';
-  loggedId: boolean = true;
-  collapsed = signal(false);
-  sideNaveWidth = computed(() => (this.collapsed() ? '70px' : '210px'));
+  
+  title = 'Satika';
+  Heading:string=''
+ menuItem = signal<SIDE_MENU_ITEM[]>(MENU_ITEM)
+  collapsed = signal(false)
+  sideNaveWidth = computed(()=>this.collapsed()?'70px':'210px')
+  Breadcrum(item:string){
+    this.Heading = item;
+  }
 }

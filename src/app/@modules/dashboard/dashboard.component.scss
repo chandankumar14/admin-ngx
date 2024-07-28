@@ -1,0 +1,55 @@
+h3 {
+  font-size: large;
+}
+
+:host ::ng-deep {
+  .p-card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+  }
+}
+
+.btn_class {
+  margin: 3px;
+  width: auto;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  align-items: center;
+  float: right;
+}
+
+.active {
+  background-color: #245778;
+  color: #fff;
+  margin: 3px;
+  width: auto;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  align-items: center;
+  float: right;
+}
+
+.bag_icon {
+  display: inline-block;
+  padding: 15px;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #245778;
+}
+
+.count {
+  display: inline-block;
+  padding-left: 20px;
+  color: black;
+}
+
+.compared_date {
+  color: darkgray;
+  font-family: auto;
+  font-weight: 700;
+}

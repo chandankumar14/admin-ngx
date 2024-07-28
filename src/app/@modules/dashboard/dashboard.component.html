@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 col-sm-6 col-xs-12 card_data">
+      <p-card header=" Total Orders" >
+        <i class="pi pi-shopping-bag bag_icon"></i>
+        <h1 class="count">2500</h1>
+        <p class="mt-3 compared_date">
+          Compared to June 10 2024
+      </p>
+       </p-card>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12 card_data">
+      <p-card header=" Active Orders" >
+        <i class="pi pi-shopping-bag bag_icon"></i>
+        <h1 class="count">1500</h1>
+        <p class="mt-3 compared_date">
+          Compared to June 10 2024
+      </p>
+      </p-card>
+    </div>
+
+    <div class="col-md-4 col-sm-6 col-xs-12 card_data">
+      <p-card header=" Completed Orders"  [style]="{'width':'100%'}">
+        <i class="pi pi-shopping-bag bag_icon"></i>
+        <h1 class="count">1000</h1>
+        <p class="mt-3 compared_date">
+          Compared to June 10 2024
+      </p>
+       </p-card>
+    </div>
+  </div>
+</div>
+
+<!-- this is for graph details -->
+<div class="container-fluid" style="margin-top: 10px;">
+  <p-card>
+    <div class="row">
+      <div class="col-md-3 col-sm-3 col-xs-12 card_data">
+        <h1 class="btn_class">Sale Graph</h1>
+      </div>
+      <div class="col-md-9 col-sm-9 col-xs-12 card_data">
+        <button [ngClass]="{'active': YEARLY, 'btn_class': !YEARLY}" (click)="selectGraph('YEARLY')">YEARLY</button>
+        <button [ngClass]="{'active': MONTHLY, 'btn_class': !MONTHLY}" (click)="selectGraph('MONTHLY')">MONTHLY</button>
+        <button [ngClass]="{'active': WEEKLY, 'btn_class': !WEEKLY}" (click)="selectGraph('WEEKELY')">WEEKLY</button>
+      </div>
+    </div>
+   <hr>
+  <p-chart type="bar" [data]="data" [options]="options" /> 
+  </p-card>
+
+</div>
