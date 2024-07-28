@@ -7,6 +7,7 @@ import { ProductAddEditComponent } from './product-add-edit/product-add-edit.com
 import { AgGridAngular } from 'ag-grid-angular';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { EditorModule } from 'primeng/editor';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {MatInputModule} from '@angular/material/input';
     AgGridAngular,
     ProductRoutingModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    EditorModule
     
   ]
 })

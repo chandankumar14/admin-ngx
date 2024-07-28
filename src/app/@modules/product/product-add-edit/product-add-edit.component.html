@@ -1,46 +1,38 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6 col-sm-6 col-xs-12 ">
-            <input type="text" class="form-control inpt-field" placeholder="First name">
+            <label>Product Name</label>
+            <input type="text" class="form-control inpt-field">
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12 ">
+            <label>product Description</label>
+            <p-editor [style]="{ height: '130px' }" />
         </div>
 
         <div class="col-md-6 col-sm-6 col-xs-12 ">
-            <input type="text" class="form-control inpt-field" placeholder="First name">
+            <label for="quantity">quantity</label>
+            <input type="text" class="form-control inpt-field">
         </div>
 
         <div class="col-md-6 col-sm-6 col-xs-12 ">
-            <input type="text" class="form-control inpt-field" placeholder="product_name">
+            <label for="price"> price</label>
+            <input type="number" class="form-control inpt-field">
         </div>
 
-        <div class="col-md-6 col-sm-6 col-xs-12 ">
-            <input type="text" class="form-control inpt-field" placeholder="product_size">
-        </div>
 
         <div class="col-md-6 col-sm-6 col-xs-12 ">
+            <label for="sku_cod " class="required">SKU Code </label>
             <input type="text" class="form-control inpt-field" placeholder="sku_cod">
         </div>
 
         <div class="col-md-6 col-sm-6 col-xs-12 ">
-            <label for="inputState">State</label>
-            <select id="inputState" class="form-control">
-                <option selected>Choose...</option>
-                <option>...</option>
-            </select>
-        </div>
-
-        <div class="col-md-6 col-sm-6 col-xs-12 ">
-            <input type="text" class="form-control inpt-field" placeholder="product_description">
-        </div>
-
-        <div class="col-md-6 col-sm-6 col-xs-12 ">
-            <label for="inputState">Instock</label>
-            <select id="inputState" class="form-control">
+            <label for="Instock">Instock</label>
+            <select id="inputState" class="form-control inpt-field">
                 <option selected>Select</option>
                 <option>True</option>
                 <option>false</option>
             </select>
         </div>
-
 
     </div>
 
