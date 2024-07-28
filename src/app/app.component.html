@@ -16,11 +16,10 @@
   </mat-sidenav>
 
   <mat-sidenav-content [style.margin-left]="sideNaveWidth()">
-    <div class="justify-content-center">
-      <p class="heading">{{Heading}}</p>
+   
+    <div>
+      <router-outlet></router-outlet>
     </div>
-
-    <router-outlet></router-outlet>
   </mat-sidenav-content>
 
 </mat-sidenav-container>

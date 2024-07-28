@@ -1,1 +1,51 @@
-<p>product-add-edit works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-12 ">
+            <input type="text" class="form-control inpt-field" placeholder="First name">
+        </div>
+
+        <div class="col-md-6 col-sm-6 col-xs-12 ">
+            <input type="text" class="form-control inpt-field" placeholder="First name">
+        </div>
+
+        <div class="col-md-6 col-sm-6 col-xs-12 ">
+            <input type="text" class="form-control inpt-field" placeholder="product_name">
+        </div>
+
+        <div class="col-md-6 col-sm-6 col-xs-12 ">
+            <input type="text" class="form-control inpt-field" placeholder="product_size">
+        </div>
+
+        <div class="col-md-6 col-sm-6 col-xs-12 ">
+            <input type="text" class="form-control inpt-field" placeholder="sku_cod">
+        </div>
+
+        <div class="col-md-6 col-sm-6 col-xs-12 ">
+            <label for="inputState">State</label>
+            <select id="inputState" class="form-control">
+                <option selected>Choose...</option>
+                <option>...</option>
+            </select>
+        </div>
+
+        <div class="col-md-6 col-sm-6 col-xs-12 ">
+            <input type="text" class="form-control inpt-field" placeholder="product_description">
+        </div>
+
+        <div class="col-md-6 col-sm-6 col-xs-12 ">
+            <label for="inputState">Instock</label>
+            <select id="inputState" class="form-control">
+                <option selected>Select</option>
+                <option>True</option>
+                <option>false</option>
+            </select>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+<button type="button" class="btn btn-success btn-style" [routerLink]="['/product/product-list']">Submit</button>
+<button type="button" class="btn btn-danger btn-style" [routerLink]="['/product/product-list']">Cancel</button>

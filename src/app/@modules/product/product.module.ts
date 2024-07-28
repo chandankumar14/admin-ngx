@@ -5,7 +5,8 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductAddEditComponent } from './product-add-edit/product-add-edit.component';
 import { AgGridAngular } from 'ag-grid-angular';
-import { TableModule } from 'primeng/table';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,9 @@ import { TableModule } from 'primeng/table';
     CommonModule,
     AgGridAngular,
     ProductRoutingModule,
-    TableModule
+    MatFormFieldModule,
+    MatInputModule
+    
   ]
 })
 export class ProductModule { }
